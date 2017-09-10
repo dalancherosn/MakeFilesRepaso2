@@ -1,0 +1,15 @@
+CXX = g++
+CXXFLAGS = -I
+
+
+output: 1.o 2.o
+	$(CXX) 1.cpp 2.cpp -o output 
+
+1.o: 1.cpp
+	$(CXX) -c 1.cpp
+
+2.o: 2.cpp
+	$(CXX) -c 2.cpp 
+
+clean:
+	rm *.o output
